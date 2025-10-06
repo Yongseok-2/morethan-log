@@ -1,4 +1,4 @@
-tagimport { colors } from "../styles/colors"
+import { colors } from "../styles/colors"
 import styled from "@emotion/styled"
 import { useRouter } from "next/router"
 import React from "react"
@@ -49,3 +49,4 @@ const Tag: React.FC<Props> = ({ children }) => {
 }
 
 export default Tag
+
