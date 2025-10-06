@@ -32,7 +32,11 @@ const PostCard: React.FC<Props> = ({ data }) => {
             />
           </div>
         )}
-        <div data-thumb={!!data.thumbnail} data-category={!!category} className="content">
+        <div
+          data-thumb={!!data.thumbnail}
+          data-category={!!category}
+          className="content"
+        >
           <header className="top">
             <h2>{data.title}</h2>
           </header>
@@ -48,13 +52,10 @@ const PostCard: React.FC<Props> = ({ data }) => {
             <p>{data.summary}</p>
           </div>
           <div className="tags">
-{data.tags &&
-  data.tags.map((tag: string, idx: number) => (
-    <Tag key={tag} tag_id={idx}>
-      {tag}
-    </Tag>
-  ))}
-
+            {data.tags &&
+              data.tags.map((tag: string, idx: number) => (
+                <Tag key={idx}>{tag}</Tag>
+              ))}
           </div>
         </div>
       </article>
