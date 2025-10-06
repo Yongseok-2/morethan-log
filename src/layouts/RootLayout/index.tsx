@@ -53,7 +53,6 @@ const RootLayout = ({ children }: Props) => {
   const [blogHeight, setBlogHeight] = useState(0)
   const [throttleScrollY, setThrottleScrollY] = useState<number>(0)
   const [scheme] = useScheme()
-  const [scheme] = useScheme()
   useGtagEffect()
   useEffect(() => {
     Prism.highlightAll();
