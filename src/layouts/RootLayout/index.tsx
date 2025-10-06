@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from "react"
+import React, { useState, useEffect, ReactNode, useEffect } from "react"
 import { ThemeProvider } from "./ThemeProvider"
 import useScheme from "src/hooks/useScheme"
 import Header from "./Header"
@@ -6,6 +6,9 @@ import styled from "@emotion/styled"
 import Scripts from "src/layouts/RootLayout/Scripts"
 import useGtagEffect from "./useGtagEffect"
 import Prism from "prismjs/prism"
+import useGtagEffect from "./useGtagEffect"
+import useThrottle from "src/hooks/useThrottle"
+import { useRouter } from "next/router"
 import 'prismjs/components/prism-markup-templating.js'
 import 'prismjs/components/prism-markup.js'
 import 'prismjs/components/prism-bash.js'
