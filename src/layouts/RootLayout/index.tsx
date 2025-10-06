@@ -90,8 +90,10 @@ const RootLayout = ({ children }: Props) => {
       <Scripts />
       {/* // TODO: replace react query */}
       {/* {metaConfig.type !== "Paper" && <Header />} */}
-      <Header fullWidth={false} />
-      <StyledMain>{children}</StyledMain>
+      <Header 
+        fullWidth={false} 
+        readingProgress={blogHeight < 1200 ? 0 : getCurrentPercentage()}/>
+      <StyledMain ref={currentElementRef}>{children}</StyledMain>
     </ThemeProvider>
   )
 }
