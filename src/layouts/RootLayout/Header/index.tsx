@@ -28,6 +28,13 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
 
 export default Header
 
+const StyledWrapper = styled.div`
+  z-index: ${zIndexes.header};
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(50px);
+`
+
 const HeaderWrapper = styled.div`
   padding: 10px 0;
   background-color: ${({ theme }) => theme.colors.grayA1};
@@ -54,13 +61,6 @@ const HeaderWrapper = styled.div`
       align-items: center;
     }
   }
-`
-
-const StyledWrapper = styled.div`
-  z-index: ${zIndexes.header};
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(50px);
 `
 
 const ReadingProgress = styled.div<Props>`
