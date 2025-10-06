@@ -9,7 +9,7 @@ type Props = {
     readingProgress: number
 }
 
-const Header: React.FC<Props> = ({ fullWidth }) => {
+const Header: React.FC<Props> = ({ fullWidth, readingProgress }) => {
   return (
     <StyledWrapper>
             <HeaderWrapper>
